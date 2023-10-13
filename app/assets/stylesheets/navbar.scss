@@ -3,10 +3,18 @@
 .navbar {
   background-color: #800080;
   color: white;
-  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+
+  .navbar-brand {
+    color: white;
+    font-weight: bold; /* Makes the text bold */
+    font-size: 20px; /* Increases the font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for a 3D effect */
+  }
+
+
 
   .nav-link {
-    color: #343a40;
+    color: #e7eaee;
 
     &:hover {
       color: #007bff;
