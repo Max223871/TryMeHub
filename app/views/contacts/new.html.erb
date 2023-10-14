@@ -1,0 +1,49 @@
+<div class="container">
+  <h1 class="text-center">Contact Us</h1>
+  <%= form_with(model: @contact, local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :contact_number, 'Contact Number' %>
+      <%= form.telephone_field :contact_number, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :message %>
+      <%= form.text_area :message, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+  <%= form.label :gender %>
+  <%= form.select :gender, [['Male', 'male'], ['Female', 'female'], ['Non Binary', 'Non binary']], {}, {class: "form-control"} %>
+</div>
+
+
+    <div class="form-group">
+  <%= form.label :country %>
+  <%= form.country_select :country, priority_countries: ['US', 'CA', 'DE', 'FR'], class: "form-control" %>
+</div>
+
+    <div class="form-check">
+      <%= form.check_box :terms_and_conditions_accepted, class: "form-check-input" %>
+      <%= form.label :terms_and_conditions_accepted, 'I accept the Terms and Conditions', class: "form-check-label" %>
+    </div>
+
+    <%= form.submit "Submit", class: "btn btn-primary", disabled: '!terms_and_conditions_accepted' %>
+
+  <% end %>
+
+  <script type="text/javascript">
+    document.querySelector('input[type=submit]').disabled = true;
+
+    document.querySelector('input[type=checkbox]').addEventListener('change', function() {
+        document.querySelector('input[type=submit]').disabled = !this.checked;
+    });
+  </script>
+
+</div>
