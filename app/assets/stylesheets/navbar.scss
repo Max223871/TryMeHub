@@ -1,7 +1,7 @@
 /** @format */
 
 .navbar {
-  background-color: #800080;
+  background-color: rgba(65, 28, 226, 0.993);
   color: white;
 
   .navbar-brand {
@@ -9,8 +9,25 @@
     font-weight: bold; /* Makes the text bold */
     font-size: 20px; /* Increases the font size */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for a 3D effect */
-  }
 
+    &:hover {
+      color: #c0cfdf;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    }
+  }
+  
+
+  .white-link {
+    color: white;
+    font-size: 20px; /* Increases the font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for a 3D effect */
+    font-style: italic;
+    &:hover {
+      color: #c0cfdf;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
 
 
   .nav-link {

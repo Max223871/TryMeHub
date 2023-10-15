@@ -1,0 +1,23 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 auto;
+  &:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  padding: 0 auto;
+  max-width: 800px;
+  border: none;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  &:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+}
+
+// Path: app/assets/stylesheets/contacts.scss

@@ -1,0 +1,27 @@
+<h1>Edit User</h1>
+
+<%= form_with model: @user do |form| %>
+
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :password, "New Password" %> <!-- Optional -->
+  <%= form.password_field :password %> <!-- Optional -->
+
+  <%= form.label :password_confirmation, "Confirm New Password" %> <!-- Optional -->
+  <%= form.password_field :password_confirmation %> <!-- Optional -->
+
+  <%= form.label :gender %>
+  <%= form.text_field :gender %>
+
+  <%= form.label :country %>
+  <%= form.country_select :country %>
+
+  <!-- You typically wouldn't change terms and conditions acceptance in an edit view -->
+
+  <%= form.submit "Update my account" %>
+
+<% end %>

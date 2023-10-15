@@ -41,13 +41,25 @@ gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# 'rename' gem is used to rename Rails applications
 gem 'rename'
 
+# 'cloudinary' gem is used for image and video management in the cloud
 gem 'cloudinary'
 
+# 'bootstrap' gem is used to include Bootstrap for styling your Rails application
 gem 'bootstrap', '~> 5.0'
 
+# 'country_select' gem is used to create a country select dropdown for forms
 gem 'country_select'
+
+# 'faker' gem is used to generate fake data such as names, addresses, and phone numbers
+gem 'faker'
+
+# 'bcrypt' gem is used to securely hash and store passwords
+gem 'bcrypt', '~> 3.1.7'
+
+
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -66,7 +78,7 @@ group :development do
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end

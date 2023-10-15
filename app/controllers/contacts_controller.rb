@@ -13,8 +13,9 @@ class ContactsController < ApplicationController
   end
 
   def show
-    # No need to find a specific contact here
+    # just a static page
   end
+
 
   private
 

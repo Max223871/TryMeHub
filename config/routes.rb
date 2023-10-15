@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'about#index'
 
-  get '/contact', to: 'contacts#index'
   resources :contacts, only: [:new, :create, :show]
+
+  resources :users
 end
