@@ -1,28 +1,44 @@
-<h1>New User</h1>
+<div class="container2">
+  <h1>New User</h1>
 
-<%= form_with model: @user do |form| %>
+  <%= form_with model: @user, html: { class: 'needs-validation', novalidate: '' } do |form| %>
 
-  <%= form.label :username %>
-  <%= form.text_field :username %>
+    <div class="form-group">
+      <%= form.label :username %>
+      <%= form.text_field :username, class: 'form-control' %>
+    </div>
 
-  <%= form.label :email %>
-  <%= form.text_field :email %>
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: 'form-control' %>
+    </div>
 
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+    <div class="form-group">
+      <%= form.label :password %>
+      <%= form.password_field :password, class: 'form-control' %>
+    </div>
 
-  <%= form.label :password_confirmation, "Confirm Password" %>
-  <%= form.password_field :password_confirmation %>
+    <div class="form-group">
+      <%= form.label :password_confirmation, "Confirm Password" %>
+      <%= form.password_field :password_confirmation, class: 'form-control' %>
+    </div>
 
-  <%= form.label :gender %>
-  <%= form.text_field :gender %>
+    <div class="form-group">
+      <%= form.label :gender %>
+      <%= form.text_field :gender, class: 'form-control' %>
+    </div>
 
-  <%= form.label :country %>
-  <%= form.country_select :country %>
+    <div class="form-group">
+      <%= form.label :country %>
+      <%= form.country_select :country, {}, {class: "custom-select"} %>
+    </div>
 
-  <%= form.label :terms_and_conditions, 'I accept the terms and conditions' %>
-  <%= form.check_box :terms_and_conditions %>
+    <div class="form-check">
+      <%= form.check_box :terms_and_conditions, class: 'form-check-input' %>
+      <%= form.label :terms_and_conditions, 'I accept the terms and conditions', class: 'form-check-label' %>
+    </div>
 
-  <%= form.submit "Create my account" %>
+    <%= form.submit "Create my account", class: "btn btn-primary" %>
 
-<% end %>
+  <% end %>
+</div>

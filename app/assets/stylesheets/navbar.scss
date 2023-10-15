@@ -3,6 +3,17 @@
 .navbar {
   background-color: rgba(65, 28, 226, 0.993);
   color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  dropdown-toggle {
+    color: black;
+  }
+}
+
 
   .navbar-brand {
     color: white;
@@ -16,7 +27,7 @@
 
     }
   }
-  
+
 
   .white-link {
     color: white;
@@ -37,4 +48,3 @@
       color: #007bff;
     }
   }
-}

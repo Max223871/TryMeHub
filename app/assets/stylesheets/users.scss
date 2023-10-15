@@ -1,0 +1,69 @@
+.container1 {
+  background-image:  url('https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+  h1 {
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    &:hover {
+      color: #c0cfdf;
+    }
+  }
+
+  &:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+}
+
+.container2 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  margin-top: 1%;
+  animation: SignUpFromBottom 2s forwards;
+
+  /* Add these properties */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container3 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  -ms-text-kashida-space: 2;
+  width: 30%;
+  margin-top: 1%;
+
+  /* Add these properties */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.col-sm-10 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
+  max-width: 800px;
+  border: none;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}

@@ -43,7 +43,7 @@ end
 
 # Create sample users
 10.times do
-  User.create(
+  user = User.create!(
     username: Faker::Internet.username,
     email: Faker::Internet.email,
     password_digest: BCrypt::Password.create('password'),
@@ -53,4 +53,14 @@ end
     created_at: Faker::Date.between(from: '2023-01-01', to: '2023-12-31'),
     updated_at: Faker::Date.between(from: '2023-01-01', to: '2023-12-31')
   )
+
+
+  # Attach a profile picture to the user
+  if user.valid?
+    user.profile_picture.attach(
+      io: File.open(Rails.root.join('app', 'assets', 'images', 'profile_pic_woman.jpg')),
+      filename: 'profile_pic_woman.jpg',
+      content_type: 'image/jpg'
+    )
+  end
 end

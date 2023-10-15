@@ -16,6 +16,9 @@ class ContactsController < ApplicationController
     # just a static page
   end
 
+  def index
+    @contacts = Contact.all
+  end
 
   private
 
