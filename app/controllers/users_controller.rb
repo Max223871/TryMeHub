@@ -41,12 +41,15 @@ class UsersController < ApplicationController
   end
 
   def update_profile_picture
+    @user = User.find(params[:id])
     if @user.update(user_params)
       redirect_to @user, notice: 'Profile picture was successfully updated.'
     else
+      flash.now[:alert] = @user.errors.full_messages
       render :edit
     end
   end
+
 
   private
 

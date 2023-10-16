@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      put 'update_profile_picture'
+      patch 'update_profile_picture'
     end
   end
 
